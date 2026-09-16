@@ -1,0 +1,15 @@
+numpy==2.4.6
+pandas==3.0.5
+matplotlib==3.11.2
+astropy==8.0.1
+photutils==3.0.0
+scipy==1.17.1
+scikit-learn==1.9.1
+astroquery==0.4.11
+ipykernel==7.3.0
+torch==2.14.0
+
+# Note: LightGBM and XGBoost are deliberately NOT used. Both fail to load on macOS
+# without an OpenMP runtime (libomp). scikit-learn's HistGradientBoostingClassifier
+# is the same histogram-gradient-boosting algorithm and needs no system library,
+# which keeps notebook 06 runnable on any machine.
